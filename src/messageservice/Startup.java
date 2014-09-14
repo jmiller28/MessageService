@@ -9,8 +9,8 @@ package messageservice;
  *
  * @author jmiller
  */
-public class MessageService {
-
-    
-    
+public class Startup {
+    public static void main(String[] args) {
+        
+    }
 }

@@ -9,8 +9,6 @@ package messageservice;
  *
  * @author jmiller
  */
-public class MessageService {
-
-    
+public interface Acquirer {
     
 }
