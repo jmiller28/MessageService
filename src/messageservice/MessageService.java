@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package messageservice;
 
 /**
@@ -10,7 +5,17 @@ package messageservice;
  * @author jmiller
  */
 public class MessageService {
-
     
+    private Acquirer acquirer;
+    private Provider provider;
     
+    public MessageService(Acquirer acquirer, Provider provider) {
+        this.acquirer = acquirer;
+        this.provider = provider;
+    }
+    
+    public void Message() {
+        String message = acquirer.acquireMessage();
+        provider.provideMessage(message);
+    }
 }

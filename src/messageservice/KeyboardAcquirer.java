@@ -1,14 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package messageservice;
+
+import java.util.Scanner;
 
 /**
  *
  * @author jmiller
  */
 public class KeyboardAcquirer implements Acquirer {
-    
+
+    @Override
+    public String acquireMessage() {
+        System.out.println("Please enter a message.");
+
+        Scanner kb = new Scanner(System.in);
+        return kb.nextLine();
+    }
+
 }
