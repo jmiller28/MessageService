@@ -6,10 +6,10 @@ import javax.swing.JOptionPane;
  *
  * @author jmiller
  */
-public class GuiProvider implements Provider {
+public class GuiMessageWriter implements MessageWriter {
 
     @Override
-    public void provideMessage(String message) {
+    public void writeMessage(String message) {
         JOptionPane.showMessageDialog(null, message);
     }
 

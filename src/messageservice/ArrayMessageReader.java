@@ -6,10 +6,10 @@ import java.util.Random;
  *
  * @author jmiller
  */
-public class ArrayAcquirer implements Acquirer {
+public class ArrayMessageReader implements MessageReader {
 
     @Override
-    public String acquireMessage() {
+    public String readMessage() {
         String[] messages = new String[10];
 
         for (int i = 0; i < messages.length; i++) {

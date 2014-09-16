@@ -7,13 +7,13 @@ package messageservice;
 public class Startup {
 
     public static void main(String[] args) {
-        //Acquirer acquirer = new KeyboardAcquirer();
-        Acquirer acquirer = new ArrayAcquirer();
+//        MessageReader input = new KeyboardMessageReader();
+        MessageReader input = new ArrayMessageReader();
 
-        //Provider provider = new ConsoleProvider();
-        Provider provider = new GuiProvider();
+        //MessgaeWriter output = new ConsoleMessageWriter();
+        MessageWriter output = new GuiMessageWriter();
 
-        MessageService messageService = new MessageService(acquirer, provider);
+        MessageService messageService = new MessageService(input, output);
         messageService.Message();
     }
 }
